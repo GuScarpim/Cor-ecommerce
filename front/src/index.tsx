@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
 import GlobalStyles from './globalStyles';
-import NavBar from './components/menu/Navbar';
+import Home from './pages/Home';
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyles />
-    <NavBar />
+    <Home />
   </React.StrictMode>,
   document.getElementById('root')
 );

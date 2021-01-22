@@ -9,8 +9,7 @@ type Props = {
 function RightNav(props: Props) {
   return (
       <S.Ul open={props.open}>
-        <li>Home</li>
-        <li>Projetos</li>
+
       </S.Ul>
   )
 }

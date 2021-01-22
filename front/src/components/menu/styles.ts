@@ -43,7 +43,7 @@ export const StyledBurger = styled.div<INav>`
 export const Nav = styled.nav`
   height: 70px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #fff;
   align-items: center;
   position: relative;
@@ -53,17 +53,63 @@ export const Nav = styled.nav`
   }
 
   .flex {
-    margin-left: 100px;
+    max-width: 1700px;
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     color: #FFF;
   }
 
-  img {
+  .imgLogo {
     width: 170px;
     height: 41px;
   }
+
+  img {
+    margin-right: 60px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .contentInput {
+    position: relative;
+
+    input {
+      font-size: 18px;
+      outline: none;
+      width: 40vw;
+      margin: 20px -30px 0 0;
+      border: none;
+      border-bottom: 2px solid #7A7A7A;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .contentUser {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      margin: 0px 30px 0px -55px;
+      font-size: 18px;
+    }
+  }
+
+  .contentUser {
+    font-size: 13px;
+    color: #7A7A7A;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
 `
 
 export const Ul = styled.ul<INav>`
@@ -71,12 +117,10 @@ export const Ul = styled.ul<INav>`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-  position: absolute;
   width: 90%;
   top: 0;
   justify-content: flex-end;
   margin-top: 0px;
-  align-items: center;
   font-size: 18px;
   height: 67px;
   margin-left: 20px;
@@ -105,5 +149,31 @@ export const Ul = styled.ul<INav>`
 `
 
 export const Container = styled.div`
+
+`
+
+export const Notification = styled.div`
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+
+  span {
+    width: 19px;
+    height: 19px;
+    font-size: 13px;
+    border-radius: 100%;
+    background-color: #F8475F;
+    font-weight: 700;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+  }
 
 `

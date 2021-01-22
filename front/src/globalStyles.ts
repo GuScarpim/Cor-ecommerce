@@ -32,6 +32,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0px;
     margin: 0px;
   }
+
+  * {
+    font-family: 'Nunito Sans', sans-serif;
+  }
 `
 
 export default GlobalStyle;
