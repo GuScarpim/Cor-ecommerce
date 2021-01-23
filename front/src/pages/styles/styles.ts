@@ -4,9 +4,9 @@ export const Container = styled.div`
   .wave {
     position: relative;
     height: 70px;
-    width: 600px;
+    width: 100px;
     background: #e0efe3;
-    transform: rotate(260deg);
+    transform: rotate(270deg);
   }
 
   .wave:before {
@@ -14,7 +14,7 @@ export const Container = styled.div`
     display: block;
     position: absolute;
     border-radius: 100% 50%;
-    width: 340px;
+    width: 50px;
     height: 80px;
     background-color: white;
     right: -5px;
@@ -26,7 +26,7 @@ export const Container = styled.div`
     display: block;
     position: absolute;
     border-radius: 100% 50%;
-    width: 300px;
+    width: 50px;
     height: 70px;
     background-color: #e0efe3;
     left: 0;

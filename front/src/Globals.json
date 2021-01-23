@@ -1,0 +1,6 @@
+{
+  "api": {
+    "getProducts": "https://corebiz-test.herokuapp.com/api/v1/products",
+    "newsletter": "https://corebiz-test.herokuapp.com/api/v1/newsletter"
+  }
+}
