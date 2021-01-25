@@ -129,6 +129,7 @@ export const Nav = styled.nav`
 
     span {
       margin: 0px 30px 0px -55px;
+      color: #7A7A7A;
       font-size: 18px;
     }
 
@@ -139,7 +140,6 @@ export const Nav = styled.nav`
 `
 
 export const Ul = styled.ul<INav>`
-  font-family: 'Zilla Slab';
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
@@ -157,7 +157,7 @@ export const Ul = styled.ul<INav>`
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: #0D2538;
+    background-color: #7A7A7A;
     position: fixed;
     transform: ${(props) => props.open ? 'translateX(-20%)' : 'translateX(-130%)'};
     top: -16px;
@@ -171,6 +171,10 @@ export const Ul = styled.ul<INav>`
     li {
       color: #fff;
     }
+    img {
+      margin-left: 20px;
+      width: 150px;
+    }
   }
 `
 
@@ -182,16 +186,16 @@ export const Notification = styled.div`
   display: flex;
   align-items: center;
   padding-top: 12px;
-  
+
   @media (max-width: 768px) {
     position: absolute;
     right: 30px;
   }
 
   span {
-    width: 19px;
-    height: 19px;
-    font-size: 13px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
     border-radius: 100%;
     background-color: #F8475F;
     font-weight: 700;

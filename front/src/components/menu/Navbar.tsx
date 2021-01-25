@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import * as S from './styles';
 
 import Burger from './Burger';
+import ShoppingContext from '../../context/shopping/index';
 
 import Logo from '../../assets/logo.svg';
 import Lupa from '../../assets/lupa.svg';
@@ -13,6 +14,14 @@ type Props = {
 }
 
 export default function Navbar(props: Props) {
+  const { setState, state } = useContext(ShoppingContext);
+  const { setState: setGlobalState } = useContext(ShoppingContext)
+
+  useEffect(() => {
+    let valueCounter = localStorage.getItem('counter')
+    setGlobalState({ counter: Number(valueCounter) })
+  }, [])
+
   return (
     <S.Container>
       <S.Nav>
@@ -32,7 +41,7 @@ export default function Navbar(props: Props) {
 
             <S.Notification>
               <img className="shopping" src={Shopping} alt="Carrinho de compras" />
-              <span>1</span>
+              <span>{state.counter}</span>
             </S.Notification>
 
           </div>

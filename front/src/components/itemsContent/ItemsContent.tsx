@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import * as S from './styles';
 
 import StarPositive from '../../assets/starPosit.svg'
 import StarNegative from '../../assets/starNegat.svg';
+import ShoppingContext from '../../context/shopping/index';
 
 import Axios from 'axios';
 import Globals from '../../Globals.json';
@@ -19,6 +20,14 @@ interface IProducts {
 
 export default function ItemsContent() {
   const [products, setProducts] = useState<IProducts[]>([])
+
+  const { setState: setGlobalState } = useContext(ShoppingContext)
+  const { setState, state } = useContext(ShoppingContext);
+
+  const Counter = () => {
+    setGlobalState({ counter: state.counter + 1 })
+    localStorage.setItem('counter', `${state.counter + 1}`)
+  }
 
   const getProducts = () => {
     Axios.get(Globals.api.getProducts)
@@ -44,7 +53,6 @@ export default function ItemsContent() {
     }
 
     return list;
-
   }
 
   useEffect(() => {
@@ -77,7 +85,7 @@ export default function ItemsContent() {
                   </small>
                 ))}
 
-                <button>Comprar</button>
+                <button onClick={() => Counter()}>Comprar</button>
               </section>
             </S.Card>
           ))}

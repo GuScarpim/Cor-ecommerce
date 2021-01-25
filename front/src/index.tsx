@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
+import Context from './context/index';
+
 import GlobalStyles from './globalStyles';
 import Home from './pages/Home';
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyles />
-    <Home />
+    <Context>
+      <Home />
+    </Context>
   </React.StrictMode>,
   document.getElementById('root')
 );
