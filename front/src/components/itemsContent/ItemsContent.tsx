@@ -59,7 +59,7 @@ export default function ItemsContent() {
         <S.ContentCard>
           {products.map(item => (
             <S.Card key={item.productId}>
-              <img src={item.imageUrl} alt={item.productName} />
+              <img src={item.imageUrl} alt={item.productName} className="image_products" />
               {item.listPrice && <S.Flag ><strong>OFF</strong></S.Flag>}
               <section>
                 <label>{item.productName}</label>

@@ -48,8 +48,18 @@ export const Nav = styled.nav`
   align-items: center;
   position: relative;
 
-  @media (max-width: 678px) {
-    width: 100vw;
+  @media (max-width: 768px) {
+    padding: 10px;
+    height: 100px;
+    align-items: baseline;
+  }
+
+  .logo {
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .flex {
@@ -59,17 +69,32 @@ export const Nav = styled.nav`
     justify-content: space-between;
     align-items: center;
     color: #FFF;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
   }
 
   .imgLogo {
     width: 170px;
     height: 41px;
+
+    @media (max-width: 768px) {
+      width: 135px;
+      height: 41px;
+    }
   }
 
   img {
     margin-right: 60px;
     width: 25px;
     height: 25px;
+
+    @media (max-width: 768px) {
+      margin-right: 0px;
+      width: 18px;
+      height: 18px;
+    }
   }
 
   .contentInput {
@@ -85,7 +110,14 @@ export const Nav = styled.nav`
     }
 
     @media (max-width: 768px) {
-      display: none;
+      position: absolute;
+      top: 50px;
+
+      input {
+        width: 80vw;
+        right: 0;
+        font-size: 14px;
+      }
     }
   }
 
@@ -99,17 +131,11 @@ export const Nav = styled.nav`
       margin: 0px 30px 0px -55px;
       font-size: 18px;
     }
-  }
-
-  .contentUser {
-    font-size: 13px;
-    color: #7A7A7A;
 
     @media (max-width: 768px) {
       display: none;
     }
   }
-
 `
 
 export const Ul = styled.ul<INav>`
@@ -156,6 +182,11 @@ export const Notification = styled.div`
   display: flex;
   align-items: center;
   padding-top: 12px;
+  
+  @media (max-width: 768px) {
+    position: absolute;
+    right: 30px;
+  }
 
   span {
     width: 19px;

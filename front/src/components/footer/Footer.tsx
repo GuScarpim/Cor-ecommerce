@@ -9,7 +9,7 @@ import Vtex from '../../assets/vtex.svg';
 export default function Footer() {
   return (
     <S.Container>
-      <div className="grid-container">
+      <S.Content>
         <div className="localizacao">
           <h1>Localização</h1>
 
@@ -20,6 +20,7 @@ export default function Footer() {
             <p>+55 11 3090 1039</p>
           </article>
         </div>
+
         <div className="contato">
           <section>
             <button type="button">
@@ -32,6 +33,7 @@ export default function Footer() {
             </button>
           </section>
         </div>
+
         <div className="patriocinio">
           <div className="content_patriocinio">
             <p>Created by</p>
@@ -43,7 +45,7 @@ export default function Footer() {
             <img src={Vtex} alt="Vtex" />
           </div>
         </div>
-      </div>
+      </S.Content>
     </S.Container>
   )
 }

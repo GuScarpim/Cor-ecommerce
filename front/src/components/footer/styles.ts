@@ -2,26 +2,56 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background: #000;
-  color: #FFF;
+  width: 100%;
   display: flex;
   justify-content: center;
+`
+
+export const Content = styled.div`
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 280px ;
+  width: 100%;
+  padding: 0 20px 0 20px;
+  max-width: 1000px;
 
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "localizacao contato patriocinio";
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 100%;
+    align-items: flex-start;
+
+    .localizacao {
+      h1 {
+        font-size: 26px;
+
+        &:after {
+          width: 70px;
+        }
+      }
+    }
+
+    .contato {
+      width: 100%;
+      display: flex;
+      margin-left: 0;
+    }
+
+    .patriocinio {
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+
+      .content_patriocinio {
+        margin: 0 0 30px 0 !important;
+      }
+    }
   }
 
   .localizacao {
-    grid-area: localizacao;
     display: flex;
     flex-direction: column;
-    margin-left: 115px;
 
     h1 {
       position: relative;
@@ -42,12 +72,9 @@ export const Container = styled.div`
   }
 
   .contato {
-    grid-area: contato;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px 0 20px;
-    margin-left: 150px;
 
     section {
       margin-top: 40px;
@@ -73,10 +100,8 @@ export const Container = styled.div`
   }
 
   .patriocinio {
-    grid-area: patriocinio;
     display: flex;
     align-items: center;
-    margin: 0 0 0 130px;
 
     .content_patriocinio {
       margin: 0 0 0 30px;
@@ -90,5 +115,4 @@ export const Container = styled.div`
       }
     }
   }
-
 `

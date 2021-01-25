@@ -33,6 +33,7 @@ export const ContentCard = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 `
 
 export const Card = styled.div`
