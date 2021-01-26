@@ -5,7 +5,7 @@ import { ShoppingContextProvider } from "./shopping/index";
 const GlobalContext: React.SFC = ({ children }) => {
   return (
     <>
-      <ShoppingContextProvider>{children}</ShoppingContextProvider>;
+      <ShoppingContextProvider>{children}</ShoppingContextProvider>
     </>
   );
 };
